@@ -6,7 +6,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Example of Making Form</title>
 </head>
-<body>
-    
+<body leftmargin="450px" rightmargin="350px" topmargin="120px">
+    <form>
+        <fieldset>
+            <legend>Sign Up</legend>
+            <table cellpadding="5.7px">
+                <tr>
+                    <td><label>First Name</label></td>
+                    <td><input type="text" name="first" placeholder="Enter First Name"/></td>
+                </tr>
+                <tr>
+                    <td><label>Last Name</label></td>
+                    <td><input type="text" name="last" placeholder="Enter Last Name"/></td>
+                </tr>
+                <tr>
+                    <td><label>Date Of Birth</label></td>
+                    <td>
+                        <input type="number" name="day" min="1" max="31" placeholder="Day"/>
+                        <input type="number" name="month" min="1" max="12" placeholder="Month"/>
+                        <input type="number" name="year" min="1900" max="2099" placeholder="Year"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Gender</label></td>
+                    <td>
+                        <input type="radio" name="male"/>
+                        <label>Male</label>
+                        <input type="radio" name="female"/>
+                        <label>Female</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Country</label></td>
+                    <td>
+                        <select name="country">
+                            <option value="Country" selected>Country</option>
+                            <option value="India">India</option>
+                            <option value="Australia">Australia</option>
+                            <option value="New Zealand">New Zealand</option>
+                            <option value="Russia">Russia</option>
+                            <option value="China">China</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Email</label></td>
+                    <td><input type="email" name="email" placeholder="Enter Email"/></td>
+                </tr>
+                <tr>
+                    <td><label>Phone</label></td>
+                    <td><input type="tel" name="phone" placeholder="Enter Phone"/></td>
+                </tr>
+                <tr>
+                    <td><label>Password</label></td>
+                    <td><input type="password" name="pass"/></td>
+                </tr>
+                <tr>
+                    <td><label>Confirm Password</label></td>
+                    <td><input type="password" name="pass"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" name="agree" />I Agree to the Terms of Use</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit">Submit</button></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="reset">Cancel</button></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
 </body>
 </html>
