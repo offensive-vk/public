@@ -7,11 +7,12 @@
     <meta name="author" content="Vedansh">
     <title>Example of Making Form</title>
 </head>
-<body leftmargin="150px" rightmargin="150px" topmargin="120px">
+<body leftmargin="150px" rightmargin="150px" topmargin="20px">
+    <h3 align="center">Student Registration Form</h3>
     <form>
         <fieldset>
             <legend>Sign Up</legend>
-            <table cellpadding="5.7px">
+            <table cellpadding="5.7px" cellspacing="0px">
                 <tr>
                     <td><label>First Name</label></td>
                     <td><input type="text" name="first" placeholder="Enter First Name"/></td>
@@ -35,7 +36,13 @@
                         <label>Male</label>
                         <input type="radio" name="female"/>
                         <label>Female</label>
+                        <input type="radio" name="other"/>
+                        <label>Prefer Not To Say</label>
                     </td>
+                </tr>
+                <tr>
+                    <td><label>College Name</label></td>
+                    <td><input type="text" name="college" placeholder="Enter Your College Name"></td>
                 </tr>
                 <tr>
                     <td><label>Country</label></td>
@@ -51,20 +58,32 @@
                     </td>
                 </tr>
                 <tr>
+                    <td><label>State</label></td>
+                    <td><input type="text" name="state" placeholder="State"/></td>
+                </tr>
+                <tr>
+                    <td><label>City</label></td>
+                    <td><input type="text" name="City" placeholder="City"/></td>
+                </tr>
+                <tr>
+                    <td><label>Pin Code</label></td>
+                    <td><input type="number" placeholder="Pin Code" /></td>
+                </tr>
+                <tr>
                     <td><label>Email</label></td>
-                    <td><input type="email" name="email" placeholder="Enter Email"/></td>
+                    <td><input type="email" name="email" placeholder="Enter Email Id"/></td>
                 </tr>
                 <tr>
                     <td><label>Phone</label></td>
-                    <td><input type="tel" name="phone" placeholder="Enter Phone"/></td>
+                    <td><input type="tel" name="phone" placeholder="Enter Phone Number"/></td>
                 </tr>
                 <tr>
                     <td><label>Password</label></td>
-                    <td><input type="password" name="pass"/></td>
+                    <td><input type="password" name="pass" placeholder="Create Password"/></td>
                 </tr>
                 <tr>
                     <td><label>Confirm Password</label></td>
-                    <td><input type="password" name="pass"/></td>
+                    <td><input type="password" name="pass" placeholder="Confirm Password"/></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -72,12 +91,9 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><button type="submit">Submit</button></td>
+                    <td><button type="submit">Submit</button>&nbsp;&nbsp;<button type="reset">Cancel</button></td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td><button type="reset">Cancel</button></td>
-                </tr>
+                
             </table>
         </fieldset>
     </form>
