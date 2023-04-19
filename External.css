@@ -30,9 +30,8 @@ a{
     margin: 0 auto;
     border: 2px solid black;
     border-radius: 5px;
-    text-align: center;
     width: 200px;
     height: 200px;
-    align-items: center;
+    background-color: cyan;
     
 }
