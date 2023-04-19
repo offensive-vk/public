@@ -1,10 +1,28 @@
 /* Add your all CSS Properties for External.html Webpage. */
 
 html, body{
-    margin: 45px;
-    padding: 34px;
+    align-items: center;
+    margin: 97px;
+    padding: 30px;
     min-width: 800px;
     max-width: 2440px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: monospace;
     scroll-behavior: smooth;
+    background-color: burlywood;
+    overflow: hidden;
+}
+h2{
+    text-align: center;
+    color: darkorchid;
+    font-size: 45px;
+}
+p{
+    text-align: justify;
+    color: black;
+
+}
+.box{
+    border: 2px solid black;
+    border-radius: 45px;
+    align-items: center;
 }
