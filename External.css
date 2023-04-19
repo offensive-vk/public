@@ -1,6 +1,6 @@
 /* Add your all CSS Properties for External.html Webpage. */
 
-html, body{
+body{
     align-items: center;
     margin: 97px;
     padding: 30px;
@@ -18,7 +18,7 @@ h2{
     font-size: 35px;
 }
 p{
-    text-align: justify;
+    text-align: center;
     color: black;
 
 }
@@ -33,4 +33,6 @@ a{
     text-align: center;
     width: 200px;
     height: 200px;
+    align-items: center;
+    
 }
