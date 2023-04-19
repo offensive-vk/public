@@ -1,1 +1,10 @@
 /* Add your all CSS Properties for External.html Webpage. */
+
+html, body{
+    margin: 45px;
+    padding: 34px;
+    min-width: 800px;
+    max-width: 2440px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
