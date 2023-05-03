@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result Generator</title>
+    <script>
+        function marks()
+        {
+            let english = Number(document.getElementById("english").value)
+            let hindi = Number(document.getElementById("hindi").value)
+            let maths = Number(document.getElementById("maths").value)
+            let science = Number(document.getElementById("science").value)
+            let comp = Number(document.getElementById("comp").value)
+            let t = english+hindi+maths+science+comp;
+            let p = (t/500)*100;
+            let marks = document.getElementById("result");
+            let percentage = document.getElementById("percent");
+			
+			marks.innerHTML = t;
+            percentage.innerHTML = p;
+            console.log("Total Marks : ", t);
+            console.log("Percentage : ", p);
+            
+        }
+    </script>
+</head>
+<body align="center">
+    <div class="main">
+        <p>Hindi : </p><input type="number" id="hindi"><br>
+        <p>English : </p><input type="number" id="english"><br>
+        <p>Maths : </p><input type="number" id="maths"><br>
+        <p>Science : </p><input type="number" id="science"><br>
+        <p>Computer : </p><input type="number" id="comp"><br><br>
+        <button onclick="marks()">Get Total Marks & Percentage</button><br>
+        <p>Marks: (out of 500)</p><h2 id="result"></h2>
+        <p>Percentage: </p><h2 id="percent"></h2>
+    </div>
+</body>
+</html>
