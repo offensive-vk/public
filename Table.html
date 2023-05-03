@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Table of a given number</title>
 </head>
-<body topmargin="120px" leftmargin="100px" rightmargin="100px" align="center">
+<body topmargin="100px" leftmargin="100px" rightmargin="100px" align="center">
     <script>
     let table = () => {
         let input = Number(document.getElementById("Num").value);
@@ -14,11 +13,9 @@
         var table = "";
         for (var i = 1; i <= 10; i++) {
              table += input + " x " + i + " = " + input * i + "<br>";
-         }
-         result.style.border = "1px solid black";
-         result.style.margin = "100px";
-         result.style.padding = "20px";
-         result.innerHTML = table;
+        }
+        result.style.marginTop = "30px";
+        result.innerHTML = table;
     }
     </script>
 
