@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Factorial of a given number</title>
+</head>
+<body topmargin="120px" leftmargin="100px" rightmargin="100px" align="center">
+    <script>
+    let factorial = () => {
+        let num = Number(document.getElementById("Num").value);
+        let result = document.getElementById("result");
+        let fact = 1;
+        for(var i = 1; i <= num; i++) 
+        {
+            fact = fact * i;
+        }
+        result.innerHTML = "Factorial of " + num + " is " + fact;
+    }
+    </script>
+
+    <main>
+    <input type="number" id="Num" placeholder="Enter A Number to Calculate Factorial"/><br><br>
+    <button onclick="factorial()">Calculate Factorial</button><br>
+
+    <div id="result"></div>
+    </main>
+    
+</body>
+</html>
