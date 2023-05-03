@@ -5,16 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Prime Number</title>
 </head>
-<body topmargin="120px" leftmargin="100px" rightmargin="100px" align="center">
+<body topmargin="50px" leftmargin="100px" rightmargin="100px" align="center">
     <script>
-    let prime = () => {
-        let num = Number(document.getElementById("Num").value);
-        let result = document.getElementById("result");
+        function prime() {
+            let num = Number(document.getElementById("Num").value);
+            let result = document.getElementById("result");
 
-        
-    }
+            if(num == '' || num < 1) {
+                result.innerHTML = "Please Enter a Valid Number";
+                return;
+            }
+            var i;
+            var flag = true;
+            if (num == 1) {
+                flag = false;
+            } else {
+                for(i = 2; i < num-1; i++) {
+                    if (num % i == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            if(flag == true) {
+                result.innerHTML = "The number: " + num + " is a Prime Number";
+            } else {
+                result.innerHTML = "The number: " + num + " is NOT a Prime Number";
+            }
+        }
     </script>
-
     <main>
     <input type="number" id="Num" placeholder="Enter A Number to Check Its Prime or not"/><br><br>
     <button onclick="prime()">Check Number</button><br>
