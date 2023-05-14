@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Day and Time</title>
+</head>
+<body>
+    <div id="day"></div>
+    <div id="time"></div>
+    <script>
+        const res = document.getElementById("day");
+        const now = new Date();
+
+        const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        const day = daysOfWeek[now.getDay()];
+        res.innerHTML = "Today is : "+day;
+
+        const time = document.getElementById("time");
+        let hours = now.getHours();
+        let minutes = now.getMinutes();
+        const amOrPm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12 || 12;
+        if (hours < 10) {
+            hours = '0' + hours;
+        }
+        if (minutes < 10) {
+            minutes = '0' + minutes;
+        }
+        
+        time.innerHTML = "Current Time is : "+hours+ " : " + minutes + " "+amOrPm;
+
+    </script>
+</body>
+</html>
