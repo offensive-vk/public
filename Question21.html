@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Field Checker</title>
+</head>
+<body onload="start()">
+    <label>Field Checker</label><br>
+    <input type="text" id="input" />
+    <div id="res"></div>
+    <script>
+        var input = document.getElementById("input").value;
+        var res = document.getElementById("res");
+        let check = () => {
+            if(input == ''){
+                res.innerHTML = "Field is Empty";          
+            }
+            else if(input == ' '){
+                res.innerHTML = "Field contains " + input;
+            }
+        }
+        let start = () => setInterval(check, 1000);
+    </script>
+</body>
+</html>
