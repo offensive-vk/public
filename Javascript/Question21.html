@@ -5,20 +5,30 @@
 
     <title>Field Checker</title>
 </head>
-<body onload="start()">
+<body>
+    
+    <form onsubmit="return check()">
     <label>Field Checker</label><br>
     <input type="text" id="input" />
+    <button type="submit">Submit</button>
     <div id="res"></div>
+    </form>
     <script>
         var input = document.getElementById("input").value;
         var res = document.getElementById("res");
+        var flag = true;
         let check = () => {
-            if(input == ''){
-                res.innerHTML = "Field is Empty";          
+            if(input.length == 0){
+                res.innerHTML = "Field is Empty";   
+                flag = false;       
             }
-            else if(input == ' '){
-                res.innerHTML = "Field contains " + input;
+            else{
+                alert("Form submitted !");
+                // res.innerHTML = "Field contains " + input;
+                flag = true;
             }
+            return flag;
+
         }
         let start = () => setInterval(check, 1000);
     </script>
