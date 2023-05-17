@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unique Gradient Generator</title>
+</head>
+<body>
+    <div id="gradient-container">
+        <h1>Unique Gradient Generator</h1>
+    </div>
+    <script>
+        function generateUniqueGradient() {
+            var color1 = getRandomColor();
+            var color2 = getRandomColor();
+
+            // Create the linear gradient CSS string
+            var gradient = "linear-gradient(45deg, " + color1 + ", " + color2 + ")";
+
+            var container = document.getElementById("gradient-container");
+            document.body.style.background = gradient;
+        }
+
+        function getRandomColor() {
+            var color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            return color;
+        }
+
+        generateUniqueGradient();
+    </script>
+</body>
+</html>
