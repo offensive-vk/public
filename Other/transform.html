@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Transform Properties</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #ffefba, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+    
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      color: #333333;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 50px auto;
+      max-width: 800px;
+    }
+    
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      color: #333333;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .box:hover {
+      transform: rotate(360deg) scale(1.2);
+    }
+    
+    .box:nth-child(2n) {
+      background: linear-gradient(to bottom right, #ffabab, #ffddaa);
+    }
+    
+    .box:nth-child(2n+1) {
+      background: linear-gradient(to bottom right, #c1fba4, #ffffff);
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Transform Properties</h1>
+  <div class="container">
+    <div class="box">Translate</div>
+    <div class="box" style="transform: rotate(45deg)">Rotate</div>
+    <div class="box" style="transform: scale(1.2)">Scale</div>
+    <div class="box" style="transform: skewX(30deg)">Skew X</div>
+    <div class="box" style="transform: skewY(-30deg)">Skew Y</div>
+    <div class="box" style="transform: translate(50px, -50px)">Translate</div>
+    <div class="box" style="transform: rotateX(45deg)">Rotate X</div>
+    <div class="box" style="transform: rotateY(45deg)">Rotate Y</div>
+    <div class="box" style="transform: perspective(600px) rotateY(45deg)">3D</div>
+  </div>
+</body>
+</html>
