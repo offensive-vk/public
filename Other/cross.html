@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Designs</title>
+    <title>Playing With Transform</title>
     <style>
         html{
             border: 2.5px solid cyan;
@@ -25,13 +25,18 @@
         .hr1{
             position: absolute;
             transform: rotate(25deg);
-            /* top: 50px;
-            left: 100px; */
+            transition: all 900ms ease-in-out;
+        }
+        .hr1:hover{
+            transform: scaleX(1.5) rotateY(60deg);
         }
         .hr2{
             position: absolute;
             transform: rotate(-25deg);
-        
+            transition: all 900ms ease-in-out;
+        }
+        .hr2:hover{
+            transform: scaleX(1.5) rotateX(-60deg);
         }
     </style>
 </head>
