@@ -4,13 +4,41 @@
     <meta charset="UTF-8">
     <title>Designs</title>
     <style>
+        html{
+            border: 2.5px solid cyan;
+            height: 100%;
+        }
+        body{
+            margin: 90px;
+            padding: 100px;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #000;
+        }
         
+        hr{
+            background: linear-gradient(45deg, cyan, magenta);
+            border: none;
+            border-radius: 30px;
+            margin-top: 11rem;
+        }
+        .hr1{
+            position: absolute;
+            transform: rotate(25deg);
+            /* top: 50px;
+            left: 100px; */
+        }
+        .hr2{
+            position: absolute;
+            transform: rotate(-25deg);
+        
+        }
     </style>
 </head>
 <body>
     <section>
-        <hr width="100%" size="20px">
-        <hr width="100%" size="20px">
+        <hr width="75%" size="25px" class="hr1">
+        <hr width="75%" size="25px" class="hr2">
     </section>
 </body>
 </html>
