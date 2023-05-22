@@ -3,53 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Vedansh">
-    <title>Validate Email Address</title>
+    <title>Email Address Validation</title>
 </head>
 <body>
     <form onsubmit="return validateEmail()">
-    <input type="text" placeholder="Enter Your Email" id="email"/>
+    <input type="text" placeholder="Enter Your Email" id="email"/><br>
     <label id="label"></label><br>
     <input type="submit" placeholder="Submit"/>
     </form>
-<!-- 
+
     <script>
-        var label = document.getElementById("label");
         let validateEmail = () => {
-        }
-        </script> -->
-    <script>
-        function validateEmail() {
+	    	var flag = true;
             var email = document.getElementById("email").value;
-            // Check if the email address is at least 3 characters long
-            if (email.length < 1) {
-            return false;
+            var label = document.getElementById("label");
+            var x = email.indexOf("@");
+            var y = email.lastIndexOf(".");
+            var len = email.length;
+            if(len == 0){
+                label.innerText = "Field is Empty !";
+                flag = false;
             }
-
-            // Check if the email address contains an "@" symbol
-            if (email.indexOf("@") < 0) {
-            return false;
-            }
-
-            // Check if the email address contains a "." symbol
-            if (email.indexOf(".") < 0) {
-            return false;
-            }
-
-            // Check if the email address contains any spaces
-            if (email.indexOf(" ") >= 0) {
-            return false;
-            }
-
-            // Check if the email address contains any special characters other than "@" and "."
-            for (var i = 0; i < email.length; i++) {
-            var ch = email[i];
-            if (ch != "@" && ch != "." && (ch < 'a' || ch > 'z') && (ch < 'A' || ch > 'Z') && (ch < '0' || ch > '9')) {
-            return false;
-            }
-            }
-            console.log("Email address is valid");
-            // The email address is valid
-            return true;
+            else{
+                if(x >- 1 && x >= 1 && (y-1-x) >= 1 && (len-1-y) >= 2)
+                {
+                    label.innerHTML=" ";
+                    flag = false;
+                }
+                else
+                {
+                    label.innerHTML=" Invalid Email!!";  
+                    flag = false;
+                }
+            }    
+           return flag;
         }
     </script>
 </body>
