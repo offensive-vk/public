@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vedansh">
+    <title>Password Validation</title>
+</head>
+<body>
+    <form onsubmit="return validatePassword()">
+    <input type="text" placeholder="Password" id="password"/><br>
+    <label id="label"></label><br>
+    <input type="submit" placeholder="Submit"/>
+    </form>
+
+    <script>
+        let validatePassword = () => {     
+	    	var flag = true;
+            var password = document.getElementById("password").value;
+            var label = document.getElementById("label");
+            if(password.length < 8)
+            {
+                label.innerHTML = "Password must contain Minimum 8 characters";
+                flag = false;
+            }
+            else{
+                var upper=0;
+				var lower=0;
+                var digit=0;
+                var symbol=0;
+                for(let i = 0; i<password.length; i++)
+                {
+                    var code=password.charCodeAt(i);
+                    if(code >= 65 && code <= 90)
+                        upper++;
+                    else if(code >= 97 && code <= 122)
+                        lower++;
+                    else if(code >= 48 && code <= 57)
+                        digit++;
+                    else
+                        symbol++;
+                }
+                if(upper >= 2 && lower >= 2 && digit >= 2 && symbol >= 1)
+                {
+                    label.innerHTML=" ";
+                }
+                else
+                {
+                    label.innerHTML="Password Must Contain Minimum of 2 Uppercase, 2 Lowercase , 2 Digits and 1 Symbol. ";
+                    flag = false;
+                }
+				return flag;
+            }
+        }
+    </script>
+</body>
+</html>
