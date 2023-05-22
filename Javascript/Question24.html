@@ -6,10 +6,38 @@
     <title>Phone Number Validation</title>
 </head>
 <body>
-    <form onsubmit="return validateEmail()">
-    <input type="text" placeholder="Enter Your Email" id="email"/><br>
+    <form onsubmit="return validateNumber()">
+    <input type="number" placeholder="Enter Phone Number" id="number"/><br>
     <label id="label"></label><br>
     <input type="submit" placeholder="Submit"/>
     </form>
+
+    <script>
+        let validateNumber = () => {
+            var flag = true;
+            var number = document.getElementById("number").value;
+            var label = document.getElementById("label");
+            if(number.length == 0){
+                label.innerHTML = "Field is Empty !";
+                flag = false;
+            }
+            else{
+                label.innerHTML = " ";
+                if(number.length != 10){
+                    label.innerHTML = "Phone Number Must Be of 10 digits !";
+                    flag = false;
+                }else{
+                    label.innerHTML = " ";
+                    if(email >= 6000000000 && email <= 9999999999){
+                        label.innerHTML = " ";
+                    }else{
+                        label.innerHTML = "Phone Number is Invalid !";
+                        flag = false;
+                    }
+                }
+            }
+            return flag;
+        }
+    </script>
 </body>
 </html>
