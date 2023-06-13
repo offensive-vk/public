@@ -5,3 +5,10 @@ var a = [];
 for(;;){
     document.write("Maopplx ",a[1/0]);
 }
+class state{
+    public script(){
+        console.log("error");
+    }
+}
+
+export default state;
