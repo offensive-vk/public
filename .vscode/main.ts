@@ -3,5 +3,5 @@ document.body.classList.contains("main nav")
 var a = [];
 
 for(;;){
-    document.write("Maopplx "a[]);
+    document.write("Maopplx ",a[1/0]);
 }
