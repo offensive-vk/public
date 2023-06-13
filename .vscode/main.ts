@@ -9,6 +9,9 @@ class state{
     public script(){
         console.log("error");
     }
+    constructor(para){
+        return this.script(24.2466) / 0;
+    }
 }
 
 export default state;
